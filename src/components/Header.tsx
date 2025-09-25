@@ -17,17 +17,17 @@ const Header = () => {
         </div>
 
         {/* Navigation Menu (Desktop) */}
-        <nav className="hidden md:flex items-center space-x-8 rounded-full border border-gray-100/50 px-6 py-3">
-          <Link href="/featured" className="text-white hover:text-orange-400 transition-colors font-medium text-base">FEATURED</Link>
-          <Link href="/celebrities" className="text-white hover:text-orange-400 transition-colors font-medium text-base">CELEBRITIES</Link>
-          <Link href="/trending" className="text-white hover:text-orange-400 transition-colors font-medium text-base">TRENDING</Link>
-          <Link href="/brands" className="text-white hover:text-orange-400 transition-colors font-medium text-base">BRANDS</Link>
+        <nav className="hidden xl:flex items-center space-x-8 rounded-full border border-gray-100/50 px-6 py-3">
+          <Link href="/featured" className="text-white hover:text-orange-400 transition-colors font-medium text-sm">FEATURED</Link>
+          <Link href="/celebrities" className="text-white hover:text-orange-400 transition-colors font-medium text-sm">CELEBRITIES</Link>
+          <Link href="/trending" className="text-white hover:text-orange-400 transition-colors font-medium text-sm">TRENDING</Link>
+          <Link href="/brands" className="text-white hover:text-orange-400 transition-colors font-medium text-sm">BRANDS</Link>
         </nav>
 
         {/* Right Section */}
         <div className="flex items-center space-x-4">
           {/* Filter Button */}
-          <button className="hidden md:flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-full transition-colors">
+          <button className="hidden xl:flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-full transition-colors">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.707A1 1 0 013 7V4z" />
             </svg>
@@ -35,7 +35,7 @@ const Header = () => {
           </button>
 
           {/* Search Bar */}
-          <div className="relative hidden md:block">
+          <div className="relative hidden xl:block">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -50,7 +50,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="xl:hidden p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
           >
@@ -71,7 +71,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {menuOpen && (
-        <div className="md:hidden mt-4 pt-4 border-t border-gray-700">
+        <div className="xl:hidden mt-4 pt-4 border-t border-gray-700">
           <nav className="flex flex-col space-y-3">
             <Link href="/featured" className="text-white hover:text-orange-400 transition-colors font-medium py-2">FEATURED</Link>
             <Link href="/celebrities" className="text-white hover:text-orange-400 transition-colors font-medium py-2">CELEBRITIES</Link>
